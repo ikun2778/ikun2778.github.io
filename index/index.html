@@ -7,7 +7,7 @@
     <meta name="description" content="index" />
     <meta name="hexo-theme-A4" content="v1.9.6" />
     <link rel="alternate icon" type="image/webp" href="https://s21.ax1x.com/2024/12/14/pAqizO1.jpg">
-    <title>Hexo</title>
+    <title>Yinting</title>
 
     
         
@@ -23,6 +23,10 @@
 <link rel="stylesheet" href="/css/fonts.css">
  
          <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
         
         
         
@@ -295,7 +299,7 @@
             src="https://s21.ax1x.com/2024/12/14/pAqizO1.jpg" 
         />
         <div class="header-content">
-            <a class="logo" href="/">Hexo</a> 
+            <a class="logo" href="/">Yinting</a> 
             <span class="description"></span> 
         </div>
     </div>
@@ -336,7 +340,7 @@
         <div class=".article-gallery"><h1 id="本公主的网页-🌟"><a href="#本公主的网页-🌟" class="headerlink" title="本公主的网页 🌟"></a>本公主的网页 🌟</h1><p><strong>你们可以叫我</strong> <code>公主</code>，惹！✨<br>一个热衷于解决问题、探索未知领域的,我可是爱得不得了的 <strong>街道工作者</strong>,惹~</p>
 <h2 id="我的兴趣"><a href="#我的兴趣" class="headerlink" title="我的兴趣"></a>我的兴趣</h2><ul>
 <li>🍊 <strong>大橘瓣</strong> — 这可是我最爱的零食了！😋  </li>
-<li><strong>星巴克高级饮品</strong> — 追求精致生活的体现。</li>
+<li><strong>星巴克</strong> <strong>高级饮品</strong> — 追求精致生活的体现。</li>
 </ul>
 <h2 id="访问我的-GitHub"><a href="#访问我的-GitHub" class="headerlink" title="访问我的 GitHub"></a>访问我的 GitHub</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/ikun2778">点击访问我的 GitHub主页</a>(其实根本没有东西)</li>
@@ -366,6 +370,46 @@
 
     
         
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+         
+    </div>
+    
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://plqgithub-pdithqnub-ikun2778s-projects.vercel.app/',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: false, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: '留下你的评论吧。', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+
+    
+    
+    
+    </div>
+
 
      
 </div>

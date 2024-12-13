@@ -7,7 +7,7 @@
     <meta name="description" content="数字字符提取输出" />
     <meta name="hexo-theme-A4" content="v1.9.6" />
     <link rel="alternate icon" type="image/webp" href="https://s21.ax1x.com/2024/12/14/pAqizO1.jpg">
-    <title>Hexo</title>
+    <title>Yinting</title>
 
     
         
@@ -23,6 +23,10 @@
 <link rel="stylesheet" href="/css/fonts.css">
  
          <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
         
         
         
@@ -295,7 +299,7 @@
             src="https://s21.ax1x.com/2024/12/14/pAqizO1.jpg" 
         />
         <div class="header-content">
-            <a class="logo" href="/">Hexo</a> 
+            <a class="logo" href="/">Yinting</a> 
             <span class="description"></span> 
         </div>
     </div>
@@ -428,6 +432,46 @@ int main() &#123;
 
     
         
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+         
+    </div>
+    
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://plqgithub-pdithqnub-ikun2778s-projects.vercel.app/',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: false, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: '留下你的评论吧。', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+
+    
+    
+    
+    </div>
+
 
      
 </div>
