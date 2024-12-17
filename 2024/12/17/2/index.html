@@ -12,7 +12,7 @@
     <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
-    <meta name="description" content="3" />
+    <meta name="description" content="加密与解密小程序" />
     <meta name="hexo-theme-A4" content="v1.9.6" />
     <link rel="alternate icon" type="image/webp" href="https://s21.ax1x.com/2024/12/14/pAqizO1.jpg">
     <title>Yinting</title>
@@ -31,6 +31,10 @@
 <link rel="stylesheet" href="/css/fonts.css">
  
          <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
         
         
         
@@ -347,7 +351,7 @@
         
             
                 <div class="post-main-title" style="text-align: center;">
-                    3
+                    加密与解密小程序
                 </div>
             
         
@@ -360,13 +364,13 @@
             <div class="post-head-meta-center">
         
                 
-                    <span>最近更新：2024-12-16</span> 
+                    <span>最近更新：2024-12-17</span> 
                 
                 
                     
                         &nbsp; | &nbsp;
                     
-                     <span>字数总计：82</span>
+                     <span>字数总计：272</span>
                 
                 
                     
@@ -391,14 +395,14 @@
                 
             
         
-        <div class=".article-gallery"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;Hello, Hexo!&quot;</span>;</span><br><span class="line">        System.out.println(str);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 输出字符串中的数字字符</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">input</span> <span class="operator">=</span> <span class="string">&quot;abc123def456&quot;</span>;</span><br><span class="line">        System.out.print(<span class="string">&quot;字符串中的数字字符为: &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; input.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (Character.isDigit(input.charAt(i))) &#123;</span><br><span class="line">                System.out.print(input.charAt(i));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <div class=".article-gallery"><figure class="highlight csharp"><figcaption><span>加密和解密的小程序</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="meta">#include &lt;string.h&gt;</span></span><br><span class="line"><span class="meta">#include &lt;stdlib.h&gt;</span></span><br><span class="line"><span class="meta">#include &lt;ctype.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">encode</span>(<span class="params"><span class="built_in">char</span> *pstr</span>)</span> &#123;   <span class="comment">//加密</span></span><br><span class="line">    <span class="built_in">int</span> len = strlen(pstr); <span class="comment">// 字符串长度</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (isalpha(pstr[i])) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tolower(pstr[i]) != <span class="string">&#x27;z&#x27;</span>) &#123;</span><br><span class="line">                pstr[i]++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (isupper(pstr[i]))</span><br><span class="line">                    pstr[i] = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    pstr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (isupper(pstr[i]))</span><br><span class="line">                pstr[i] = tolower(pstr[i]);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                pstr[i] = toupper(pstr[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (isdigit(pstr[i])) &#123;</span><br><span class="line">            <span class="keyword">if</span> (pstr[i] != <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">                pstr[i]++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                pstr[i] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">decode</span>(<span class="params"><span class="built_in">char</span> *pstr</span>)</span> &#123;   <span class="comment">//解密</span></span><br><span class="line">    <span class="built_in">int</span> len = strlen(pstr); <span class="comment">// 字符串长度</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (isalpha(pstr[i])) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tolower(pstr[i]) != <span class="string">&#x27;a&#x27;</span>) &#123;</span><br><span class="line">                pstr[i]--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (isupper(pstr[i]))</span><br><span class="line">                    pstr[i] = <span class="string">&#x27;Z&#x27;</span>;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    pstr[i] = <span class="string">&#x27;z&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (isupper(pstr[i]))</span><br><span class="line">                pstr[i] = tolower(pstr[i]);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                pstr[i] = toupper(pstr[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (isdigit(pstr[i])) &#123;</span><br><span class="line">            <span class="keyword">if</span> (pstr[i] != <span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">                pstr[i]--;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                pstr[i] = <span class="string">&#x27;9&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">int</span> <span class="title">main</span>()</span> &#123;</span><br><span class="line">    <span class="built_in">char</span> p1[<span class="number">100</span>];</span><br><span class="line">    printf(<span class="string">&quot;输入你想加密的字符串:\n&quot;</span>);</span><br><span class="line">    gets(p1);</span><br><span class="line">    encode(p1);</span><br><span class="line">    printf(<span class="string">&quot;加密后: %s\n&quot;</span>, p1);</span><br><span class="line">    decode(p1);</span><br><span class="line">    printf(<span class="string">&quot;解密后: %s&quot;</span>, p1);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </div>
     </div>
 
     <div class="post-meta">
         <i>
         
-            <span>2024-12-16</span>
+            <span>2024-12-17</span>
             
             
              
@@ -422,6 +426,49 @@
     
         
     
+
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+         
+    </div>
+    
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://dazzling-malasada-f08aa7.netlify.app/.netlify/functions/comment',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: false, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: '留下你的评论吧。', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+
+    
+    
+    
+    </div>
+
 
      
 </div>
