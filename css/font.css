@@ -3,3 +3,9 @@
     src: url("../fonts/ZZAY.ttf") format("truetype");
     font-weight: 300;
   }
+
+@font-face {
+    font-family: "consola";
+    src: url("../fonts/consola.ttf") format("truetype");
+    font-weight: 300;
+  }
