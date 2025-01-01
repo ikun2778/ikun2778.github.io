@@ -181,52 +181,44 @@ document.addEventListener('pjax:send', function () {
 
 if (document.getElementById("tenyear")) {
     updateTenYearProgress();
-}</script></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fa-solid fa-comment"></i><span> 评论</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div></main><footer id="footer"><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 - 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src="/img/favicon.ico">IKUN</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" alt="Powered by Hexo">Powered by Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/r1i1na/hexo-theme-eureka" alt="Theme Eureka">Theme Eureka</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="solitude fa-solid fa-copyright"></i><i class="solitude fa-brands fa-creative-commons-by"></i><i class="solitude fa-brands fa-creative-commons-nc"></i><i class="solitude fa-brands fa-creative-commons-nd"></i></a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=2.1.10"></script><script src="/js/main.js?v=2.1.10"></script><script src="/js/third_party/waterfall.min.js?v=2.1.10"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/5.14.2/algoliasearch.umd.min.js"></script><script src="/js/link-decorator.js" defer></script><script defer pjax src="/js/countdown.js"></script><script defer pjax src="/js/visinfo.js"></script><div class="js-pjax"><script>(() => {
-    const getCount = () => {
-        const ele = document.querySelectorAll('.twikoo-count')
-        if (!ele) return
-        twikoo.getCommentsCount({
-            envId: 'https://sage-melba-c114a9.netlify.app/.netlify/functions/twikoo',
-            region: '',
-            urls: [window.location.pathname],
-            includeReply: false
-        }).then(res => {
-            ele.forEach(item => item.textContent = res[0].count)
-        }).catch(err => {
-            console.error(err)
-        })
-    }
-    const init = () => {
-        twikoo.init(Object.assign({
-            el: '#twikoo-wrap',
-            envId: 'https://sage-melba-c114a9.netlify.app/.netlify/functions/twikoo',
-            region: '',
+}</script></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fa-solid fa-comment"></i><span> 评论</span></div></div><div class="comment-wrap"><div id="waline-wrap"></div></div></div></div></main><footer id="footer"><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 - 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src="/img/favicon.ico">IKUN</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" alt="Powered by Hexo">Powered by Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/r1i1na/hexo-theme-eureka" alt="Theme Eureka">Theme Eureka</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="solitude fa-solid fa-copyright"></i><i class="solitude fa-brands fa-creative-commons-by"></i><i class="solitude fa-brands fa-creative-commons-nc"></i><i class="solitude fa-brands fa-creative-commons-nd"></i></a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=2.1.10"></script><script src="/js/main.js?v=2.1.10"></script><script src="/js/third_party/waterfall.min.js?v=2.1.10"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/5.14.2/algoliasearch.umd.min.js"></script><script src="/js/link-decorator.js" defer></script><script defer pjax src="/js/countdown.js"></script><script defer pjax src="/js/visinfo.js"></script><div class="js-pjax"><script>(() => {
+    let walineInitFunction = window.walineFn || null
+
+    function initWaline(initFn) {
+        const walineOptions = {
+            el: '#waline-wrap',
+            serverURL: 'https://dazzling-malasada-f08aa7.netlify.app/.netlify/functions/comment',
+            pageview: false,
+            dark: 'html[data-theme="dark"]',
             path: window.location.pathname,
-            onCommentLoaded: () => {
-                GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
-            }
-        }, null))
-
-         && getCount()
+            comment: true,
+            ...null
+        }
+        const walineInstance = initFn(walineOptions)
+        utils.addGlobalFn('pjax', () => walineInstance.destroy(), 'destroyWaline')
+        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .wl-content img:not(.wl-emoji)'))
         sco.owoBig({
-            body: '.OwO-body',
-            item: '.OwO-items li'
+            body: '.wl-emoji-popup',
+            item: '.wl-tab-wrapper button'
         })
-
-        false && barrageTwikoo()
     }
 
-    const loadTwikoo = () => {
-        if (typeof twikoo === 'object') setTimeout(init,0)
-        else utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.40/twikoo.all.min.js').then(init)
+    async function loadWaline() {
+        if (walineInitFunction) initWaline(walineInitFunction)
+        else {
+            await utils.getCSS('https://cdnjs.cloudflare.com/ajax/libs/waline/3.3.2/waline.min.css')
+            const {init} = await import('https://cdnjs.cloudflare.com/ajax/libs/waline/3.3.2/waline.min.js')
+            walineInitFunction = init || Waline.init
+            initWaline(walineInitFunction)
+            window.walineFn = walineInitFunction
+        }
+        false && barrageWaline()
     }
 
-    if ('Twikoo' === 'Twikoo' || false) {
-        if (false) utils.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
-        else loadTwikoo()
-    } else {
-        window.loadTwoComment = loadTwikoo
-    }
+    if (true || false) {
+        if (false) utils.loadComment(document.getElementById('waline-wrap'), loadWaline)
+        else loadWaline()
+    } else window.loadTwoComment = loadWaline
 })()
 </script></div></div><!-- pjax--><script>const pjax = new Pjax({
     elements: 'a:not([target="_blank"])',
