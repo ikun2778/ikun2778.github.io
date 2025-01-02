@@ -4466,6 +4466,11 @@ span.tags-punctuation i {
     left: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  #nav-console {
+    display: none;
+  }
+}
 span.tags-punctuation {
   display: flex;
   align-items: center;
@@ -5169,65 +5174,6 @@ span.tags-punctuation {
   #recent-posts {
     padding: 0 1rem;
   }
-}
-#rightside {
-  position: fixed;
-  right: -2.5rem;
-  bottom: 20px;
-  z-index: 1000;
-  opacity: 0;
-  transition: all 0.5s;
-}
-#rightside button {
-  display: block;
-  margin-bottom: 5px;
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  background-color: var(--btn-bg);
-  color: var(--btn-color);
-  text-align: center;
-  font-size: 16px;
-}
-#rightside button.pc {
-  display: blok;
-}
-@media screen and (max-width: 900px) {
-  #rightside button.pc {
-    display: none;
-  }
-}
-#rightside button.mobile {
-  display: none;
-}
-@media screen and (max-width: 900px) {
-  #rightside button.mobile {
-    display: block;
-  }
-}
-#rightside button.top:hover #percent {
-  display: none;
-}
-#rightside button.top:hover i {
-  display: block;
-  transition: all 0.3s;
-  transform: scale(1.3);
-}
-#rightside button.top i {
-  transition: all 0.3s;
-  display: none;
-}
-#rightside button.top i.show {
-  display: block;
-}
-#rightside .rs_hide {
-  transform: translate(45px, 0);
-  transition: all 0.4s;
-  opacity: 0;
-}
-#rightside .rs_hide.show {
-  opacity: 0.8;
-  transform: translate(0, 0);
 }
 #sidebar {
   background: var(--rin-maskbg);
@@ -6185,6 +6131,99 @@ span.tagsPageCount {
 }
 #body-wrap.error .aside-list .aside-list-item .content time {
   display: none;
+}
+div.console_recentcomments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-height: 100px;
+  width: 100%;
+}
+.comment-card {
+  position: relative;
+  width: calc(100% / 3 - 8px);
+  background: var(--rin-card-bg);
+  border-radius: 12px;
+  border: var(--style-border-always);
+  padding: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.console-card .comment-card {
+  width: calc(100% / 2 - 8px);
+}
+@media screen and (max-width: 900px) {
+  .comment-card {
+    width: calc(100% / 2 - 6px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .comment-card {
+    width: 100%;
+  }
+}
+.comment-card:hover {
+  border-color: var(--style-border-hover-always);
+}
+.comment-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: var(--style-border-always);
+  padding-bottom: 8px;
+}
+.comment-info div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+.comment-article,
+.comment-content {
+  transition: 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.comment-title {
+  font-size: 12px;
+  color: var(--rin-secondtext);
+  margin-top: auto;
+  transition: 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-height: 1;
+  opacity: 0.6;
+  padding-top: 8px;
+}
+.comment-title i {
+  font-size: 12px;
+  line-height: 12px;
+}
+.console_recentcomments .comment-info img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin: 0;
+}
+span.comment-user {
+  font-weight: 700;
+}
+time.comment-time {
+  font-size: 12px;
+  color: var(--rin-secondtext);
+  margin-left: auto;
 }
 .flink#banners {
   margin-bottom: 0.5rem;
