@@ -1,0 +1,10 @@
+@font-face{
+    font-family: 'ZZAY'; 
+    font-display: swap;
+    src: url('/font/ZZAY.ttf') format("truetype");
+  }
+@font-face{
+    font-family: 'consola'; 
+    font-display: swap;
+    src: url('/font/consola.ttf') format("truetype");
+  }
