@@ -83,7 +83,7 @@
 }
 
 #calendar-main a.now {
-    background:#388e3c;
+    background:#00acc1;
     color: var(--efu-card-bg);
 }
 
@@ -146,13 +146,13 @@
 }
 
 progress::-webkit-progress-bar {
-    background: linear-gradient(to right, #9e9e9e, #81c784);  /* 深灰色与绿色渐变背景 */
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2);  /* 浅蓝色渐变背景 */
     border-radius: 5px;
     overflow: hidden;
 }
 
 progress::-webkit-progress-value {
-    background: #388e3c;  /* 温和的深绿色进度条 */
+    background: #00acc1;  /* 浅蓝色进度条 */
     border-radius: 5px;
 }
 
