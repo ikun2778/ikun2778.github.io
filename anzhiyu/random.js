@@ -1,3 +1,3 @@
-var posts=["post/ed232872.html","post/7517.html","post/2534.html","post/79666db.html"];function toRandomPost(){
+var posts=["2024/12/19/hello-world/","2025/01/05/数据结构/","2025/01/01/客观题/","2024/12/30/编程题/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
