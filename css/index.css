@@ -7972,7 +7972,7 @@ body:has(#console.show) #nav-music {
   box-shadow: none;
 }
 #anMusic-page meting-js .aplayer .aplayer-body {
-  width: 40%;
+  width: 60%;
   height: calc(100vh - 169px);
 }
 #anMusic-page meting-js .aplayer .aplayer-body .aplayer-pic {
@@ -8031,7 +8031,7 @@ body:has(#console.show) #nav-music {
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 50px;
+  bottom: 40px;
 }
 #anMusic-page meting-js .aplayer .aplayer-body .aplayer-info .aplayer-controller .aplayer-bar-wrap {
   margin: 0 160px 0 150px;
@@ -8119,7 +8119,7 @@ body:has(#console.show) #nav-music {
   display: none;
 }
 #anMusic-page meting-js .aplayer .aplayer-list {
-  width: 60%;
+  width: 40%;
   height: 100%;
 }
 #anMusic-page meting-js .aplayer ol {
