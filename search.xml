@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>复习</title>
+      <link href="/2025/03/02/%E5%A4%8D%E4%B9%A0/"/>
+      <url>/2025/03/02/%E5%A4%8D%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><p>数据元素：是数据的<strong>基本单位</strong>，在计算机中通常作为一个整体进行考虑和处理。在有些情况下，数据元素也称为元素、结点、记录等。<br>数据项：是组成数据元素的、有独立含义的、不可分割的<strong>最小单位</strong>。<br>逻辑结构：从逻辑关系上描述数据，它与数据的存储无关，是独立于计算机的。<br>存储结构：数据对象在计算机中的存储表示，也称为物理结构。</p><h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><p>顺序表和链表的比较<br><img src="https://s21.ax1x.com/2025/03/02/pEGYU6e.png" alt="顺序表和链表的比较"></p><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>top 指栈顶元素后一位置<br>S.top &#x3D;&#x3D; 0时，栈空<br>S.top &#x3D;&#x3D; stacksize 时，栈满</p><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>队空的条件： Q.front &#x3D;&#x3D; Q.rear<br>队满的条件： (Q.rear+ 1)%MAXQSIZE &#x3D;&#x3D; Q.front<br>入队：Q.rear &#x3D; (Q.rear + 1)% MAXQSIZE<br>出队：Q.front &#x3D; (Q.front + 1)% MAXQSIZE<br>当前元素个数： (Q.rear - Q.front + MAXQSIZE) % MAXQSIZE</p><h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p>性质1：在二叉树的第i层上至多有<em>2^（i-1）</em>个结点（i&gt;&#x3D;1）<br>性质2：深度为k的二叉树至多有<em>2^k-1</em>个结点（k&gt;&#x3D;1）<br>性质3：对任何一棵二叉树T，如果其终端结点数为n0,度为2的结点数为n2，则<em>n0&#x3D;n2+1</em><br>性质4：具有n个结点的完全二叉树的深度为***[log2n]+1<br>性质5：<br>如果对一颗有n个结点的完全二叉树（其深度为[log2n ] + 1）的结点按层序编号（从第1层到第[log2n ] + 1层，每层从左到右），对任一结点i(1&lt;&#x3D;i&lt;&#x3D;n)有：<br>如果i&#x3D;1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲是结点 i&#x2F;2<br>如果2i&gt;n,则结点 i 无孩子（结点i为叶子结点）；否则其左孩子是结点 2i<br>如果2i+1&gt;n,则结点 i 无右孩子；否则其右孩子是结点 2i+1</p><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><p><img src="https://s21.ax1x.com/2025/03/03/pEGtIDH.png" alt="排序"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构</title>
       <link href="/2025/01/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
       <url>/2025/01/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
