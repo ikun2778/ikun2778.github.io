@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>mermaid测试</title>
+      <link href="/2025/03/16/1/"/>
+      <url>/2025/03/16/1/</url>
+      
+        <content type="html"><![CDATA[<div class="mermaid-wrap"><pre class="mermaid-src" hidden>  flowchart LRA[Hard] --&gt;|Text| B(Round)B --&gt; C{Decision}C --&gt;|One| D[Result 1]C --&gt;|Two| E[Result 2]  </pre></div><div class="mermaid-wrap"><pre class="mermaid-src" hidden>  pie&quot;Dogs&quot; : 386&quot;Cats&quot; : 85.9&quot;Rats&quot; : 15  </pre></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mermaid </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>复习</title>
       <link href="/2025/03/02/%E5%A4%8D%E4%B9%A0/"/>
       <url>/2025/03/02/%E5%A4%8D%E4%B9%A0/</url>
