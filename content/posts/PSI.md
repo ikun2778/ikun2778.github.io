@@ -115,6 +115,16 @@ $$
     "containLabel": true
   },
 
+  "toolbox": {
+    "left": "left",
+    "feature": {
+      "saveAsImage": {
+        "title": "保存为图片",
+        "type": "svg"
+      }
+    }
+  },
+
   "xAxis": {
     "type": "category",
     "name": "log₂(n)",
@@ -189,6 +199,16 @@ $$
     "bottom": "10%",
     "top": "20%",
     "containLabel": true
+  },
+
+  "toolbox": {
+    "left": "left",
+    "feature": {
+      "saveAsImage": {
+        "title": "保存为图片",
+        "type": "svg"
+      }
+    }
   },
 
   "xAxis": {
@@ -302,6 +322,16 @@ OT-based PSI 主要基于：
     "containLabel": true
   },
 
+  "toolbox": {
+    "left": "left",
+    "feature": {
+      "saveAsImage": {
+        "title": "保存为图片",
+        "type": "svg"
+      }
+    }
+  },
+
   "xAxis": {
     "type": "category",
     "name": "log₂(n)",
@@ -367,6 +397,16 @@ OT-based PSI 主要基于：
     "bottom": "10%",
     "top": "20%",
     "containLabel": true
+  },
+
+  "toolbox": {
+    "left": "left",
+    "feature": {
+      "saveAsImage": {
+        "title": "保存为图片",
+        "type": "svg"
+      }
+    }
   },
 
   "xAxis": {
